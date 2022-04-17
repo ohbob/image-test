@@ -1,6 +1,6 @@
 <script>
     export let data = '';
-    const domain = "http://144.91.100.171:1337/uploads/";
+    const domain = "https://bk1.nallus.com/uploads/";
     const file = data.data.file;
     const url = file.url.replace('/uploads/', '');
     const caption = data.data.caption;
@@ -15,6 +15,7 @@
 	}
 </script>
 {#if file}
+{domain}f_webp,{quality},w_{containerWidth}/{url}
 <div class:loaded style="width: 100%; max-width:{w}">
 	<div style="overflow: hidden;" bind:offsetWidth={containerWidth}>
 		<picture>
